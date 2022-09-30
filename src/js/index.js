@@ -9,6 +9,7 @@ const overlay = document.querySelector(".overlay");
 const plusBtn = document.querySelector(".menu-button");
 const plus = plusBtn.childNodes[1];
 const gitLink = document.querySelector(".git-link");
+const container2 = document.querySelector(".container-2");
 
 // adding event listener for changin the icon
 plusBtn.addEventListener("click", function (e) {
@@ -50,6 +51,16 @@ function submitUrl(e) {
   }
 }
 
+const data = {
+  organization: {
+    location: null,
+    social_links: null,
+    disposable: false,
+    webmail: true,
+    website_url: "gmail.com",
+  },
+  emails: [],
+};
 // next step is putting the url to the the end of the domain.
 function runFetching(url) {
   const SearchUrl = `https://api.tomba.io/v1/domain-search?domain=${url}`;
@@ -58,7 +69,15 @@ function runFetching(url) {
   request.addEventListener("load", function () {
     const { data } = JSON.parse(this.responseText);
     console.log(this.responseText);
-    createDom(data);
+    if (data.emails.length > 0) {
+      createDom(data);
+      console.log("Data is valid");
+    } else {
+      loader.className = "hide-loader";
+      overlay.style.display = "none";
+      container2.innerHTML = "";
+      alert(`sorry, we couldn't find ${url} data.`);
+    }
   });
 
   request.open("GET", SearchUrl);
@@ -125,7 +144,8 @@ const backBonehtml = `<div class="search-result-div">
 
 function createSkelton(html) {
   heading.innerHTML = "";
-  container.insertAdjacentHTML("afterend", html);
+  container2.innerHTML = "";
+  container2.innerHTML = html;
 }
 
 function createDom(data) {
