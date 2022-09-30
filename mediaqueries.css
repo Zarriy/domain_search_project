@@ -1,0 +1,227 @@
+/* Media Break Points 
+1: 850px
+2: 550px
+3: 390px
+4: 250px
+Media Queries for the grid 
+1: 1110
+2: 700
+*/
+@media screen and (max-width: 70em) {
+  .email-content {
+    width: 90%;
+  }
+  .organization {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 53em) {
+  .header-div {
+    padding: 20px 40px;
+  }
+  .heading-text h1 {
+    font-size: 52px;
+  }
+  .heading-text p {
+    font-size: 16px;
+  }
+  input {
+    width: 340px;
+  }
+  footer p {
+    font-size: 16px;
+  }
+  .email-content {
+    width: 95%;
+  }
+  .organization {
+    width: 95%;
+  }
+  .email-info p {
+    font-size: 16px;
+  }
+  .linkedin-icon a {
+    width: 45px;
+    height: 45px;
+  }
+  .linkedin-icon a ion-icon {
+    font-size: 26px;
+  }
+  .email-Box h2,
+  .organization h2 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 44em) {
+  .search-result-div {
+    grid-template-columns: 2fr 1fr;
+  }
+  .email-content {
+    width: 100%;
+  }
+  .organization {
+    width: 100%;
+  }
+  .email-info p {
+    font-size: 14px;
+  }
+  .linkedin-icon a {
+    width: 40px;
+    height: 40px;
+  }
+  .linkedin-icon a ion-icon {
+    font-size: 22px;
+  }
+  .email-Box h2,
+  .organization h2 {
+    font-size: 20px;
+  }
+  .organization p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 34em) {
+  .header-div {
+    padding: 10px 20px;
+  }
+  .heading-text h1 {
+    font-size: 46px;
+  }
+  .heading-text p {
+    font-size: 14px;
+  }
+  input {
+    width: 240px;
+  }
+  footer p {
+    font-size: 14px;
+  }
+  .search-result-div {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+  .organization {
+    padding: 16px 0px;
+    margin: 0 0 40px 0;
+    height: 260px;
+  }
+  .orgainzation-result {
+    grid-row: 1/2;
+  }
+  .about-domain {
+    text-align: center;
+  }
+  .organization {
+    width: 100%;
+  }
+  .email-Box {
+    width: 100%;
+  }
+  .git-link {
+    font-size: 14px;
+    padding: 8px 10px;
+    width: 150px;
+    top: 16px;
+    right: 80px;
+  }
+}
+
+@media screen and (max-width: 25em) {
+  .logo-div img {
+    width: 30px;
+  }
+  .logo-div span {
+    font-size: 14px;
+    top: -10px;
+  }
+  .menu-button {
+    width: 30px;
+    height: 30px;
+  }
+  .heading-text h1 {
+    font-size: 32px;
+  }
+  .heading-text p,
+  footer p {
+    font-size: 12px;
+  }
+  input {
+    width: 160px;
+  }
+  .submit-button {
+    font-size: 14px;
+    padding: 9px 10px;
+  }
+  .orgainzation-result {
+    justify-self: center;
+    width: 90%;
+  }
+  .organization {
+    width: 100%;
+  }
+  .email-Box {
+    width: 90%;
+    justify-self: center;
+  }
+  .git-link {
+    font-size: 12px;
+    padding: 6px 10px;
+    width: 140px;
+    top: 46px;
+    right: 20px;
+  }
+}
+
+@media screen and (max-width: 26em) {
+  .heading-text h1 {
+    font-size: 28px;
+  }
+  .heading-text p {
+    font-size: 11px;
+  }
+  input {
+    width: 70%;
+  }
+  .submit-button {
+    margin-top: 20px;
+  }
+  .orgainzation-result {
+    justify-self: center;
+    width: 66%;
+  }
+  .organization {
+    width: 100%;
+  }
+  .email-Box {
+    width: 66%;
+    justify-self: center;
+  }
+  .email-content {
+    width: 120%;
+    display: block;
+    position: relative;
+  }
+  .email-Box h2,
+  .organization h2 {
+    font-size: 18px;
+  }
+  .linkedin-icon a {
+    width: 30px;
+    height: 30px;
+  }
+  .linkedin-icon a ion-icon {
+    font-size: 18px;
+  }
+  .email-info p {
+    font-size: 12px;
+  }
+  .linkedin-icon a {
+    position: absolute;
+    bottom: -10px;
+    left: 60px;
+  }
+  .organization p {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,294 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --var-back: #0e0b2a;
+  --font-fam: "Hind Siliguri", sans-serif;
+  --var-btn: #abe5d8;
+  --var-red: #f54654;
+  --var-hover: #e9c1c4;
+  --var-email-back: #ffffff;
+  --var-email-text: #0077b5;
+}
+
+body {
+  background-color: var(--var-back);
+  font-family: var(--font-fam);
+  color: #fff;
+}
+/* Basic default code */
+a {
+  text-decoration: none;
+}
+.header-div {
+  padding: 20px 50px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-div img {
+  width: 40px;
+}
+.logo-div span {
+  display: inline-block;
+  font-size: 18px;
+  color: #fff;
+  margin-left: 10px;
+  text-align: center;
+  position: relative;
+  top: -12px;
+}
+.menu-button {
+  width: 40px;
+  border: none;
+  background-color: var(--var-red);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 2px 2px;
+}
+.menu-button ion-icon {
+  font-size: 34px;
+  color: #fff;
+}
+
+.heading-text {
+  text-align: center;
+  margin-top: 80px;
+}
+.heading-text h1 {
+  font-size: 62px;
+  font-weight: 700;
+}
+.search-input-div {
+  margin-top: 40px;
+}
+form {
+  text-align: center;
+}
+input {
+  width: 400px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+}
+input:focus {
+  outline: none;
+}
+.submit-button {
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 9px 20px;
+  position: relative;
+  top: 1px;
+  background-color: var(--var-red);
+  border: none;
+  cursor: pointer;
+  transition: all 200ms linear;
+}
+.submit-button:hover {
+  background-color: var(--var-hover);
+}
+.submit-button:active {
+  transform: scale(0.9);
+}
+
+/* Email Content Div */
+.search-result-div {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 24px;
+  margin: 60px 60px 60px 60px;
+  align-items: center;
+}
+.email-Box {
+  margin-top: -40px;
+}
+.email-Box h2 {
+  margin-bottom: 10px;
+}
+.email-results {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-shrink: 0;
+  flex-direction: column;
+  background-color: #adb5bd;
+  padding: 20px 40px;
+  height: 350px;
+  overflow-y: scroll;
+  border-radius: 9px;
+  box-shadow: 0px 0px 16px 3px rgba(255, 255, 255, 0.093);
+}
+.email-content {
+  width: 580px;
+  height: 120px;
+  padding: 10px 20px;
+  background-color: var(--var-email-back);
+  color: #10394b;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.organization {
+  background-color: #fff;
+  border-radius: 9px;
+  height: 300px;
+  width: 320px;
+  margin-top: 40px;
+  color: var(--var-back);
+  text-align: center;
+  padding: 16px 24px;
+}
+
+.email-info p {
+  font-size: 20px;
+  font-weight: 500;
+}
+a.email-link {
+  font-weight: 400;
+  color: var(--var-email-text);
+}
+.email-span {
+  font-weight: 400;
+  color: var(--var-back);
+}
+.linkedin-icon a {
+  background-color: #e9ecef;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.linkedin-icon a ion-icon {
+  font-size: 32px;
+  color: #0077b5;
+}
+.linkedin-icon a:hover {
+  background-color: #dee2e6;
+}
+.about-domain {
+  text-align: left;
+  margin-top: 20px;
+}
+.about-domain p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.organization-social-icons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.organization a ion-icon {
+  font-size: 32px;
+  color: var(--var-back);
+}
+.organization-data {
+  font-weight: 500;
+  color: var(--var-email-text);
+}
+.disabled {
+  color: rgb(92, 92, 92) !important;
+  background-color: rgb(54, 54, 54) !important;
+  pointer-events: none;
+}
+.org-disabled,
+.org-disabled ion-icon {
+  color: rgb(132, 132, 132) !important;
+  pointer-events: none;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: 0 auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 5;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.hide-loader {
+  display: none;
+}
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 4;
+}
+footer {
+  background-color: #f54654;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 2px 0px 2px 0px;
+}
+footer a {
+  color: var(--var-back);
+}
+
+/* Code Toggle */
+.git-link {
+  background-color: var(--var-hover);
+  position: absolute;
+  right: 100px;
+  top: 24px;
+  padding: 10px 20px;
+  transition: all 500ms ease;
+  border-radius: 4px;
+}
+.noActive {
+  width: 0px;
+  opacity: 0;
+  visibility: 0;
+}
+.noActive p {
+  display: none;
+}
+.activate {
+  visibility: 1;
+  width: 200px;
+  opacity: 1;
+}
+.activate p {
+  display: block;
+}
